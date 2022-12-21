@@ -3,3 +3,61 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* utilities */
+/* ***************************************************************** */
+.row{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+.flexcard{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* struttura */
+/* ***************************************************************** */
+.background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    /* background: linear-gradient(to top, #dde8e8 , #DDDBD1 85%, #009688 85%); */
+}
+.container{
+    width: 90vw;
+    height: 95vh;
+    border: 1px solid black;
+    margin: auto;
+}
+/* colonna sx */
+.left-col-40{
+    width: calc(100% - 60%);
+}
+.left-topbar{
+    height: 80px;
+    width: 100%;
+    border: 1px solid black;
+}
+.user-topbar{
+    height: 100%;
+}
+/* colonna dx */
+.right-col-60{
+    width: calc(100% - 40%);
+}
+.left-col-40, .right-col-60{
+    height: 100%;
+    border: 1px solid red;
+}
+
+/* stile */
+/* ***************************************************************** */
+/* colonna sx */
+.user-topbar-profile{
+    height: 100%;
+}
+.user-topbar-profile img{
+    height: 100%;
+    border-radius: 50%;
+}
