@@ -15,6 +15,9 @@
     justify-content: space-between;
     align-items: center;
 }
+.flex{
+    display: flex;
+}
 /* struttura */
 /* ***************************************************************** */
 .background{
@@ -37,11 +40,28 @@
 .left-topbar{
     height: 80px;
     width: 100%;
-    border: 1px solid black;
+    background-color: #EAEAEA;
 }
 .user-topbar{
     height: 100%;
+    display: flex;
+    align-items: center
 }
+.user-topbar-profile{
+    height: 100%;
+    padding: 10px;
+}
+.user-topbar-profile img{
+    height: 100%;
+    border-radius: 50%;
+}
+.buttons-topbar{
+    gap: 20px;
+    font-size: 30px;
+    padding-right: 20px;
+    color: #B1B1B1;
+}
+
 /* colonna dx */
 .right-col-60{
     width: calc(100% - 40%);
@@ -54,10 +74,3 @@
 /* stile */
 /* ***************************************************************** */
 /* colonna sx */
-.user-topbar-profile{
-    height: 100%;
-}
-.user-topbar-profile img{
-    height: 100%;
-    border-radius: 50%;
-}
