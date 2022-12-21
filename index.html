@@ -44,10 +44,10 @@
                             <div class="chats">
                                 <div v-for="(item,index) in contacts" class="chat flexcard">
                                     <div class="chat-left">
-                                        <div class="chat-profile-pic"><img :src="contacts[index].avatar" alt=""></div>
+                                        <div class="chat-profile-pic"><img :src="item.avatar" alt=""></div>
                                         <div class="chat-info">
-                                            <div class="chat-name">{{contacts[index].name}}</div>
-                                            <div class="chat-last-message">Ultimo messaggio inviato</div>
+                                            <div class="chat-name">{{item.name}}</div>
+                                            <div class="chat-last-message">{{item.messages[item.messages.length-1].message}}</div>
                                         </div>
                                     </div>
                                     <div class="chat-last-message-time">12:00</div>

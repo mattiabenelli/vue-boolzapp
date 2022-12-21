@@ -169,12 +169,7 @@ createApp({
         }
     },
     created() {
-        this.lastMessage()
     },
     methods: {
-        lastMessage(){
-            let lastElement = this.contacts[0].messages.lenght
-            console.log(lastElement)
-        }
     },
 }).mount('#app')
