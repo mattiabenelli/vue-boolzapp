@@ -22,6 +22,7 @@
 .p-top-10{
     padding-top: 10px;
 }
+
 /* struttura */
 /* ***************************************************************** */
 
@@ -130,6 +131,7 @@
 .chat-left{
     display: flex;
     height: 100%;
+    width: 80%;
 }
 .chat-profile-pic{
     height: 100%;
@@ -153,8 +155,11 @@
     color: #B0BAC6;
     display: flex;
     align-items: flex-start;
+    justify-content: flex-end;
     padding: 10px;
     height: 100%;
+    font-size: 15px;
+    text-align: right;
 }
 
 /* colonna dx */
@@ -174,7 +179,6 @@
 .main-chat{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     height: calc(100% - 60px - 80px) ;
     background-image: url("../img/mine.jpg");
     background-repeat: repeat;

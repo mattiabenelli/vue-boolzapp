@@ -171,5 +171,9 @@ createApp({
     created() {
     },
     methods: {
+        changeProfile(index){
+            this.activeProfile = index;
+            console.log(index)
+        },
     },
 }).mount('#app')

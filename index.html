@@ -42,7 +42,7 @@
                                 <input type="text" placeholder="Cerca o inizia una nuova chat">
                             </div>
                             <div class="chats">
-                                <div v-for="(item,index) in contacts" class="chat flexcard">
+                                <div @click="changeProfile(index)"  v-for="(item,index) in contacts" class="chat flexcard">
                                     <div class="chat-left">
                                         <div class="chat-profile-pic"><img :src="`./img/avatar${item.avatar}.jpg`" alt=""></div>
                                         <div class="chat-info">
@@ -59,10 +59,10 @@
                             <div class="right-topbar flexcard">
                                 <div class="right-topbar-left-items flex">
                                     <div class="user-topbar-profile">
-                                        <img src="./img/avatar_1.jpg" alt="">
+                                        <img :src="`./img/avatar${contacts[activeProfile].avatar}.jpg`" alt="">
                                     </div>
                                     <div class="chat-info">
-                                        <div class="chat-name p-top-10">Michele</div>
+                                        <div class="chat-name p-top-10">{{contacts[activeProfile].name}}</div>
                                         <div class="chat-last-access">Ultimo accesso oggi alle 12:00</div>
                                     </div>
                                 </div>
@@ -75,7 +75,7 @@
                                 </div>
                             </div>
                             <div class="main-chat">
-                                
+                                <div v-for="(item,index) in contacts[activeProfile].messages" class="message">{{item.message}}</div>
                             </div>
                             <div class="message-bar flexcard">
                                 <button class="emoticon-button"><i class="fa-regular fa-face-smile"></i></button>
