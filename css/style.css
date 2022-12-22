@@ -176,12 +176,46 @@
 .right-topbar-left-items{
     height: 100%;
 }
-.main-chat{
-    display: flex;
-    flex-direction: column;
+.main-chat-container{
     height: calc(100% - 60px - 80px) ;
     background-image: url("../img/mine.jpg");
     background-repeat: repeat;
+}
+.main-chat{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 20px;
+}
+.message{
+    width: 350px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 15px 10px;
+    position: relative;
+    margin: 10px 0;
+}
+.message-position{
+    width: 100%;
+    display: flex;
+}
+.sent{
+    background-color: #FFFFFF;
+}
+.received-position{
+    justify-content: end;
+}
+.received{
+    background-color: #D5F9BA;
+}
+.message-time{
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    font-size: 10px;
 }
 .message-bar{
     width: 100%;

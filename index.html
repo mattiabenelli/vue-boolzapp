@@ -74,8 +74,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="main-chat">
-                                <div v-for="(item,index) in contacts[activeProfile].messages" class="message">{{item.message}}</div>
+                            <div class="main-chat-container">
+                                <div class="main-chat">
+                                    <div v-for="(item,index) in contacts[activeProfile].messages" v-bind:class="(item.status == 'received') ? 'received-position' : 'sent-position'" class="message-position">
+                                        <div v-bind:class="(item.status == 'received') ? 'received' : 'sent'" class="message">
+                                            <div class="message-content">{{item.message}}</div>
+                                            <div class="message-time">{{item.date}}</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="message-bar flexcard">
                                 <button class="emoticon-button"><i class="fa-regular fa-face-smile"></i></button>
