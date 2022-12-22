@@ -44,13 +44,13 @@
                             <div class="chats">
                                 <div v-for="(item,index) in contacts" class="chat flexcard">
                                     <div class="chat-left">
-                                        <div class="chat-profile-pic"><img :src="item.avatar" alt=""></div>
+                                        <div class="chat-profile-pic"><img :src="`./img/avatar${item.avatar}.jpg`" alt=""></div>
                                         <div class="chat-info">
                                             <div class="chat-name">{{item.name}}</div>
                                             <div class="chat-last-message">{{item.messages[item.messages.length-1].message}}</div>
                                         </div>
                                     </div>
-                                    <div class="chat-last-message-time">12:00</div>
+                                    <div class="chat-last-message-time">{{item.messages[item.messages.length-1].date}}</div>
                                 </div>
                                 
                             </div>
@@ -74,11 +74,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="main-chat"></div>
-                            <div class="message-bar">
-                                <div class="emoticon-button"><i class="fa-solid fa-face-smile"></i></div>
-                                <div class="new-message-bar"><input type="text" placeholder="Scrivi un messaggio"></div>
-                                <div class="audio-button"><i class="fa-solid fa-microphone"></i></div>
+                            <div class="main-chat">
+                                
+                            </div>
+                            <div class="message-bar flexcard">
+                                <button class="emoticon-button"><i class="fa-regular fa-face-smile"></i></button>
+                                <input type="text" placeholder="Scrivi un messaggio">
+                                <button class="audio-button"><i class="fa-solid fa-microphone"></i></button>
                             </div>
                         </div>
                     </div>
