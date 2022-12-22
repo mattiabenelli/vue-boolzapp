@@ -86,7 +86,7 @@
                             </div>
                             <div class="message-bar flexcard">
                                 <button class="emoticon-button"><i class="fa-regular fa-face-smile"></i></button>
-                                <input type="text" placeholder="Scrivi un messaggio">
+                                <input @keyup.enter="addMessage(activeProfile); postResponse()"  v-model="newMessage" type="text" placeholder="Scrivi un messaggio">
                                 <button class="audio-button"><i class="fa-solid fa-microphone"></i></button>
                             </div>
                         </div>

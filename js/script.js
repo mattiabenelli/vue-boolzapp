@@ -3,6 +3,8 @@ createApp({
     data() {
         return {
             activeProfile: 0,
+            newMessage: '',
+            reply: null,
             contacts: [
                 {
                     name: 'Michele',
@@ -174,6 +176,26 @@ createApp({
         changeProfile(index){
             this.activeProfile = index;
             console.log(index)
+        },
+        addMessage(index){
+            const item ={
+                message:this.newMessage,
+                status: 'received'
+            }
+            this.contacts[index].messages.push(item);
+            this.newMessage = '';
+        },
+        messageReply(index){
+            const item = {
+                message: 'ok',
+                status: 'sent'
+            }
+            this.contacts[index].messages.push(item);
+        },
+       postResponse(){
+            this.reply = setInterval(() => { 
+                this.messageReply(index)
+            }, 3000) 
         },
     },
 }).mount('#app')
