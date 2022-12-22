@@ -192,8 +192,8 @@ createApp({
             }
             this.contacts[index].messages.push(item);
         },
-       postResponse(){
-            this.reply = setInterval(() => { 
+       postResponse(index){
+            this.reply = setTimeout(() => { 
                 this.messageReply(index)
             }, 3000) 
         },
