@@ -39,10 +39,10 @@
                             </div>
                             <div class="searchbar">
                                 <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                                <input type="text" placeholder="Cerca o inizia una nuova chat">
+                                <input @keyup="searchText" v-model="search" type="text" placeholder="Cerca o inizia una nuova chat">
                             </div>
                             <div class="chats">
-                                <div @click="changeProfile(index)"  v-for="(item,index) in contacts" class="chat flexcard">
+                                <div @click="changeProfile(index)"  v-for="(item,index) in searchText" class="chat flexcard">
                                     <div class="chat-left">
                                         <div class="chat-profile-pic"><img :src="`./img/avatar${item.avatar}.jpg`" alt=""></div>
                                         <div class="chat-info">

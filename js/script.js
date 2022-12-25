@@ -4,6 +4,7 @@ createApp({
         return {
             activeProfile: 0,
             newMessage: '',
+            search: '', 
             reply: null,
             contacts: [
                 {
@@ -169,6 +170,20 @@ createApp({
                 }
                 ]
         }
+    },
+    computed: {
+        searchText(){
+            let foundText;
+            if(this.search != ''){
+                foundText = this.contacts.filter((element) => {
+                    return element.name.toLowerCase().includes(this.search.toLowerCase())
+                })
+            }
+            else{
+                foundText = this.contacts;
+            }
+            return foundText
+        },
     },
     created() {
     },
